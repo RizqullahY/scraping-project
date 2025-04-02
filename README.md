@@ -4,4 +4,11 @@ chmod +x git-push.sh
 chmod +x venv.sh 
 ``` 
 
-python/src/
+# ACTIVATE THE VENV
+```bash
+➜  scrapping-project git:(master) ✗ source python/bin/activate
+(python) ➜  scrapping-project git:(master) ✗ cd python/src 
+(python) ➜  src git:(master) ✗ 
+
+```
+

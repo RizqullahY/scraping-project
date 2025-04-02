@@ -1,7 +1,4 @@
 #!/bin/bash
 
-cd python/ 
-source bin/activate
-cd src/
-
+source python/bin/activate
 exit 0
