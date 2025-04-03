@@ -5,144 +5,216 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HEHEBOY</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./src/output.css" />
     <script src="./lib/jquery.js"></script>
   </head>
   <body>
-    <div class="container">
-        <div class="size-options">
-            <button class="size-button" data-width="50%">1/2</button>
-            <button class="size-button" data-width="100%">FULL</button>
+    <div class="container justify-center">
+      <div class="sticky top-0 bg-white shadow-md p-4 z-10">
+        <div class="options flex items-center space-x-4">
+          <button
+            class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            data-width="50%"
+          >
+            1/2
+          </button>
+          <button
+            class="size-button px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400"
+            data-width="100%"
+          >
+            FULL
+          </button>
+          <div id="scroll-controls" class="flex items-center space-x-2">
+            <label for="scroll-speed" class="text-sm font-medium text-gray-700"
+              >Auto Scroll:</label
+            >
+            <select
+              id="scroll-speed"
+              class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"
+            >
+              <option value="1">1</option>
+              <option value="3" selected>3</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+            </select>
+            <button
+              id="start-scroll"
+              class="px-3 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 text-sm font-medium"
+            >
+              Mulai
+            </button>
+            <button
+              id="stop-scroll"
+              class="px-3 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 text-sm font-medium"
+              disabled
+            >
+              Henti
+            </button>
+          </div>
         </div>
-        <div class="wrapper">
-            <img
-            src="./image/image_1.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_2.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_3.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_4.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_5.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_6.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_7.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_8.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_9.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_10.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_11.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_12.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_13.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_14.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_15.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_16.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_17.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_18.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_19.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_20.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_21.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_22.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_23.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_24.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_25.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_26.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_27.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_28.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_29.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-            <img
-            src="./image/image_30.jpg"
-            alt="Sudah Habis Atau Sudah Tau Kalau Error"
-            />
-        </div>
+      </div>
+
+      <div class="wrapper">
+        <img
+          src="./image/image_1.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_2.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_3.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_4.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_5.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_6.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_7.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_8.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_9.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_10.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_11.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_12.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_13.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_14.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_15.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_16.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_17.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_18.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_19.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_20.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_21.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_22.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_23.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_24.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_25.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_26.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_27.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_28.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_29.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_30.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+      </div>
     </div>
     <script>
-        $(document).ready(function() {
-            $(".size-button").click(function() {
-                var newWidth = $(this).data("width");
-                $(".wrapper").css("width", newWidth);
-            });
+      $(document).ready(function () {
+        $(".size-button").click(function () {
+          var newWidth = $(this).data("width");
+          $(".wrapper").css("width", newWidth);
+          $(".wrapper").css("margin-left", "auto");
+          $(".wrapper").css("margin-right", "auto");
         });
+
+        var scrolling = false;
+        var scrollSpeed = parseInt($("#scroll-speed").val());
+        var scrollInterval;
+
+        $("#scroll-speed").change(function () {
+          scrollSpeed = parseInt($(this).val());
+        });
+
+        $("#start-scroll").click(function () {
+          if (!scrolling) {
+            scrolling = true;
+            $(this).prop("disabled", true);
+            $("#stop-scroll").prop("disabled", false);
+
+            scrollInterval = setInterval(function () {
+              $(window).scrollTop($(window).scrollTop() + scrollSpeed);
+            }, 30);
+          }
+        });
+
+        $("#stop-scroll").click(function () {
+          if (scrolling) {
+            scrolling = false;
+            clearInterval(scrollInterval);
+            $("#start-scroll").prop("disabled", false);
+            $("#stop-scroll").prop("disabled", true);
+          }
+        });
+      });
     </script>
   </body>
 </html>

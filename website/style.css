@@ -3,24 +3,8 @@ body{
     padding: 0;
 }
 
-.container{
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
 img {
     display: block; 
     width: 100%; 
     height: auto;
-}
-
-.size-options {
-    margin-bottom: 10px;
-}
-
-.size-button {
-    padding: 8px 15px;
-    margin-right: 5px;
-    cursor: pointer;
 }
