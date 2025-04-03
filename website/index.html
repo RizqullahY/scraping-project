@@ -11,18 +11,41 @@
   <body>
     <div class="container justify-center">
       <div class="sticky top-0 bg-white shadow-md p-4 z-10">
-        <div class="options flex items-center space-x-4">
+        <div class="options flex items-center space-x-3">
           <button
             class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
             data-width="50%"
           >
-            1/2
+            5
+          <button
+            class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            data-width="60%"
+          >
+            6
           </button>
           <button
-            class="size-button px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400"
+            class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            data-width="70%"
+          >
+            7
+          </button>
+          <button
+            class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            data-width="80%"
+          >
+            8
+          </button>
+          <button
+            class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            data-width="90%"
+          >
+            9
+          </button>
+          <button
+            class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
             data-width="100%"
           >
-            FULL
+            10
           </button>
           <div id="scroll-controls" class="flex items-center space-x-2">
             <label for="scroll-speed" class="text-sm font-medium text-gray-700"
@@ -49,6 +72,9 @@
               disabled
             >
               Henti
+            </button>
+            <button id="fullscreen-button" class="px-3 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 text-sm font-medium">
+                Fullscreen
             </button>
           </div>
         </div>
@@ -214,6 +240,55 @@
             $("#stop-scroll").prop("disabled", true);
           }
         });
+        
+        // IF ANY INTERACTION AUTO SCROLL WILL BE STOPPED 
+        // $(document).on("mousedown mousewheel keydown", function() {
+        //     if (scrolling) {
+        //         scrolling = false;
+        //         clearInterval(scrollInterval);
+        //         $("#start-scroll").prop("disabled", false);
+        //         $("#stop-scroll").prop("disabled", true);
+        //     }
+        // });
+
+        $("#fullscreen-button").click(function() {
+                toggleFullScreen();
+            });
+
+            function toggleFullScreen() {
+                if (!document.fullscreenElement &&    // alternative standard method
+                    !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
+                    if (document.documentElement.requestFullscreen) {
+                        document.documentElement.requestFullscreen();
+                    } else if (document.documentElement.mozRequestFullScreen) {          /* Firefox */
+                        document.documentElement.mozRequestFullScreen();
+                    } else if (document.documentElement.webkitRequestFullscreen) {       /* Chrome, Safari & Opera */
+                        document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                    } else if (document.documentElement.msRequestFullscreen) {         /* IE/Edge */
+                        document.documentElement.msRequestFullscreen();
+                    }
+                    $("#fullscreen-button").text("Exit");
+                } else {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.mozCancelFullScreen) {                     /* Firefox */
+                        document.mozCancelFullScreen();
+                    } else if (document.webkitExitFullscreen) {                  /* Chrome, Safari and Opera */
+                        document.webkitExitFullscreen();
+                    } else if (document.msExitFullscreen) {                      /* IE/Edge */
+                        document.msExitFullscreen();
+                    }
+                    $("#fullscreen-button").text("Fullscreen");
+                }
+            }
+
+            $(document).on('fullscreenchange mozfullscreenchange webkitfullscreenchange msfullscreenchange', function () {
+                if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
+                    $("#fullscreen-button").text("Exit");
+                } else {
+                    $("#fullscreen-button").text("Fullscreen");
+                }
+            });
       });
     </script>
   </body>
