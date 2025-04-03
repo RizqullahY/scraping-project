@@ -12,3 +12,9 @@ chmod +x venv.sh
 
 ```
 
+# I HAVE A SHORTCUT AT 
+at python/src i have shortcut link to website/image & the name is image-website-shortcut
+```bash
+➜  src git:(master) ✗ ln -s ../../website/image image-website 
+```
+
