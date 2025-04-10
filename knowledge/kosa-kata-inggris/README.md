@@ -1,0 +1,33 @@
+- are bit lacking : sedikit kurang
+- from scratch : dari awal
+- through text : melalui teks
+- rejection : penolakan
+- proper : sesuai
+- you seriously thought your could mess with me : kamu serius berpikir kamu bisa main-main denganku
+- a decent amount of time has passed : sudah cukup banyak waktu berlalu
+- flustered : resah
+- figure out the situation : menjelaskan situasinya
+- to be honest : sejujurnya
+- seems : kelihatannya / tampaknya
+- succeed : sukses
+- incredibly : luar biasa
+- instead : seharusnya / alih alih
+- no sense : tidak masuk akal
+- shaman : dukun
+- obvious : jelas
+- strange : aneh
+- relationship : hubungan
+- definitely : tentu saja 
+- dissolve : larut
+- offer : tawaran
+- either : ...juga
+- fortune telling house : rumah peramal
+- out on a business trip : sedang dalam perjalanan bisnis
+- rural area : area pedesaan
+- sink : tenggelam / wastafel
+- dare : berani
+- even : bahkan
+- prove : membuktikan
+- conscionus : sadar
+
+
