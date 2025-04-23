@@ -29,3 +29,7 @@ python/src i have shortcut link to website/image & the name is image-website-sho
 ```bash
 chmod +x ./git-push.sh
 ```
+## FOR THE WEBSITE DONT FORGET 
+```bash
+npm install
+```

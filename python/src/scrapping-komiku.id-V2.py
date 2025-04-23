@@ -17,8 +17,8 @@ def download_image(img_url, img_path, retries=5):
             time.sleep(5)
     print(f"Failed to download {img_url} after {retries} attempts.")
 
-def scrape_images():
-    url = 'https://komiku.id/the-s-class-hunter-doesnt-want-to-be-a-villainous-princess-chapter-26/'
+def scrape_images(chapter):
+    url = f'https://komiku.id/the-s-class-hunter-doesnt-want-to-be-a-villainous-princess-chapter-{chapter}/'
     headers = {'User-Agent': 'Mozilla/5.0'}
     response = requests.get(url, headers=headers)
     
@@ -49,4 +49,7 @@ def scrape_images():
         print(f"Failed to fetch page, status code: {response.status_code}")
 
 if __name__ == '__main__':
-    scrape_images()
+    first_chapter = 27
+    until_chapter = 40
+    for chapter in range(first_chapter, until_chapter):
+        scrape_images(chapter)
