@@ -4,6 +4,8 @@ import requests
 from bs4 import BeautifulSoup
 from requests.exceptions import RequestException
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
 def download_image(img_url, img_path, retries=5):
     for attempt in range(retries):
         try:
@@ -18,7 +20,8 @@ def download_image(img_url, img_path, retries=5):
     print(f"Failed to download {img_url} after {retries} attempts.")
 
 def scrape_images(chapter):
-    url = f'https://komiku.id/the-s-class-hunter-doesnt-want-to-be-a-villainous-princess-chapter-{chapter}/'
+    # url = f'https://komiku.id/the-s-class-hunter-doesnt-want-to-be-a-villainous-princess-chapter-{chapter}/'
+    url = f'https://komiku.id/her-summon-chapter-{chapter}-id/'
     headers = {'User-Agent': 'Mozilla/5.0'}
     response = requests.get(url, headers=headers)
     
@@ -39,7 +42,7 @@ def scrape_images(chapter):
             # Jika judul tidak ditemukan, gunakan bagian akhir URL
             folder_name = url.strip('/').split('/')[-1]
 
-        folder_path = f"temp/{folder_name}"
+        folder_path = os.path.join(SCRIPT_DIR, "temp", folder_name)
         os.makedirs(folder_path, exist_ok=True)
         
         for i, img_url in enumerate(image_urls, start=1):
@@ -49,7 +52,7 @@ def scrape_images(chapter):
         print(f"Failed to fetch page, status code: {response.status_code}")
 
 if __name__ == '__main__':
-    first_chapter = 27
-    until_chapter = 40
-    for chapter in range(first_chapter, until_chapter):
+    first_chapter = 1
+    until_chapter = 5
+    for chapter in range(first_chapter, until_chapter + 1):
         scrape_images(chapter)

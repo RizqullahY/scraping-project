@@ -9,7 +9,7 @@ $(document).ready(function () {
       const img = new Image();
   
       img.onload = function () {
-        const imgElement = $(`<img src="${imgPath}" alt="Image ${index}" />`);
+        const imgElement = $(`<img src="${imgPath}" alt="Image ${index} Sudah Habis Atau Sudah Error" />`);
         wrapper.append(imgElement);
         index++;
         consecutiveFails = 0; // reset karena sukses
