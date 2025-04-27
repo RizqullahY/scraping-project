@@ -22,6 +22,7 @@ def download_image(img_url, img_path, retries=5):
 def scrape_images(chapter):
     # url = f'https://komiku.id/the-s-class-hunter-doesnt-want-to-be-a-villainous-princess-chapter-{chapter}/'
     url = f'https://komiku.id/her-summon-chapter-{chapter}-id/'
+    # url = f'https://komiku.id/magic-academys-genius-blinker-chapter-{chapter}/'
     headers = {'User-Agent': 'Mozilla/5.0'}
     response = requests.get(url, headers=headers)
     
