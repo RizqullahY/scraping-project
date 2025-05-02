@@ -22,7 +22,7 @@ pip install -r requirements.txt
 ## I HAVE A SHORTCUT AT 
 python/src i have shortcut link to website/image & the name is image-website-shortcut
 ```bash
-➜  src git:(master) ✗ ln -s ../../website/image image-website 
+➜  src git:(master) ✗ ln -s ../../website/image image-website-shortcut 
 ```
 
 ## USE GIT-PUSH.SH

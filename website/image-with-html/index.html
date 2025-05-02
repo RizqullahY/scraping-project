@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V2 NIH BOY</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../src/output.css" />
+    <script src="../lib/jquery.js"></script>
+  </head>
+  <body>
+    <div class="justify-center bg-slate-900">
+        <div class="sticky top-0 bg-white shadow-md p-4 z-10 text-center items-center">
+            <div class="options flex items-center space-x-3 justify-center">
+              <button
+                class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                data-width="50%"
+              >
+                5
+              <button
+                class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                data-width="60%"
+              >
+                6
+              </button>
+              <button
+                class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                data-width="70%"
+              >
+                7
+              </button>
+              <button
+                class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                data-width="80%"
+              >
+                8
+              </button>
+              <button
+                class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                data-width="90%"
+              >
+                9
+              </button>
+              <button
+                class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                data-width="100%"
+              >
+                10
+              </button>
+              <div id="scroll-controls" class="flex items-center space-x-2">
+                <label for="scroll-speed" class="text-sm font-medium text-gray-700"
+                  >Auto Scroll:</label
+                >
+                <select
+                  id="scroll-speed"
+                  class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"
+                >
+                  <option value="1">1</option>
+                  <option value="3" selected>3</option>
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                </select>
+                <button
+                  id="start-scroll"
+                  class="px-3 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 text-sm font-medium"
+                >
+                  Mulai
+                </button>
+                <button
+                  id="stop-scroll"
+                  class="px-3 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 text-sm font-medium"
+                  disabled
+                >
+                  Henti
+                </button>
+                <button id="fullscreen-button" class="px-3 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 text-sm font-medium">
+                    Fullscreen
+                </button>
+              </div>
+            </div>
+        </div>
+      <div class="wrapper"></div>
+    </div>
+    <script>
+        $(document).ready(function () {
+          $(".size-button").click(function () {
+            var newWidth = $(this).data("width");
+            $(".wrapper").css("width", newWidth);
+            $(".wrapper").css("margin-left", "auto");
+            $(".wrapper").css("margin-right", "auto");
+          });
+        });
+      </script>
+      <script src="../js/fullscreen.js"></script>
+      <script src="../js/autoscroll.js"></script>
+    <script src="../js/website-V2.js"></script>
+  </body>
+</html>
