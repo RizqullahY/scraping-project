@@ -68,3 +68,20 @@ That opened the way for me to implement my idea.
   </table>
 </div>
 
+## Implementation 2
+### Overview
+
+Previously, whenever I wanted to read content, I had to manually copy files from the `temp` folder to the `image` folder. Even though I used shortcuts to ease this process, it still felt inconvenient and time-consuming.
+
+To solve this, I created **version 2.1**, which automatically includes a pre-modified `index.html` file in every downloaded folder inside `/website/image-with-html/temp/`. This enhancement makes reading and navigating much easier and more efficient.
+
+### Features
+
+- Each download folder now includes an `index.html` file for immediate viewing.
+- The Python script has been updated and placed in the same directory:  
+  `/website/image-with-html-shorcut/`
+- Shortcut links now directly point to:  
+  `/website/image-with-html/`
+
+With these updates, the workflow is smoother and more automated, significantly improving the user experience.
+
