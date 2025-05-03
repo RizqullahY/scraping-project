@@ -26,7 +26,7 @@ def save_container_html(h1_title, content_html, folder_path, filename='index.htm
     print(f"Saved HTML content to: {file_path}")
 
 def scrape_container():
-    url = 'https://bacalightnovel.co/the-villain-wants-to-live-chapter-1/'
+    url = 'https://bacalightnovel.co/the-villain-wants-to-live-chapter-2/'
     headers = {'User-Agent': 'Mozilla/5.0'}
     
     try:
