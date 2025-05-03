@@ -1,40 +1,51 @@
-$(document).ready(function(){
-    var scrolling = false;
-    var scrollSpeed = parseInt($("#scroll-speed").val());
-    var scrollInterval;
+$(document).ready(function () {
+  var scrolling = false;
+  var scrollSpeed = parseInt($("#scroll-speed").val());
+  var scrollInterval;
 
-    $("#scroll-speed").change(function () {
+  $("#scroll-speed").change(function () {
       scrollSpeed = parseInt($(this).val());
-    });
+  });
 
-    $("#start-scroll").click(function () {
+  function startScrolling() {
       if (!scrolling) {
-        scrolling = true;
-        $(this).prop("disabled", true);
-        $("#stop-scroll").prop("disabled", false);
-
-        scrollInterval = setInterval(function () {
-          $(window).scrollTop($(window).scrollTop() + scrollSpeed);
-        }, 30);
+          scrolling = true;
+          $("#start-scroll").prop("disabled", true);
+          $("#stop-scroll").prop("disabled", false);
+          scrollInterval = setInterval(function () {
+              $(window).scrollTop($(window).scrollTop() + scrollSpeed);
+          }, 30);
       }
-    });
+  }
 
-    $("#stop-scroll").click(function () {
+  function stopScrolling() {
       if (scrolling) {
-        scrolling = false;
-        clearInterval(scrollInterval);
-        $("#start-scroll").prop("disabled", false);
-        $("#stop-scroll").prop("disabled", true);
+          scrolling = false;
+          clearInterval(scrollInterval);
+          $("#start-scroll").prop("disabled", false);
+          $("#stop-scroll").prop("disabled", true);
       }
-    });
-    
-    // IF ANY INTERACTION AUTO SCROLL WILL BE STOPPED 
-    // $(document).on("mousedown mousewheel keydown", function() {
-    //     if (scrolling) {
-    //         scrolling = false;
-    //         clearInterval(scrollInterval);
-    //         $("#start-scroll").prop("disabled", false);
-    //         $("#stop-scroll").prop("disabled", true);
-    //     }
-    // });
-})
+  }
+
+  $("#start-scroll").click(startScrolling);
+  $("#stop-scroll").click(stopScrolling);
+
+  // Toggle with SPACE key
+  $(document).keydown(function (e) {
+      if (e.code === "Space") {
+          e.preventDefault(); // prevent page from jumping
+          if (scrolling) {
+              stopScrolling();
+          } else {
+              startScrolling();
+          }
+      }
+  });
+
+  // Optional: stop scroll on user interaction
+  // $(document).on("mousedown mousewheel keydown", function(e) {
+  //     if (scrolling && e.code !== "Space") {
+  //         stopScrolling();
+  //     }
+  // });
+});
