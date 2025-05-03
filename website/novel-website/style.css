@@ -1,0 +1,29 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'JetBrains Mono', monospace;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.temp-link {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #66ccff;
+    text-decoration: none;
+}
+
+.temp-link:hover {
+    text-decoration: underline;
+}
+
+.text-left {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}

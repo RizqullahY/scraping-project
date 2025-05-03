@@ -6,19 +6,20 @@ from requests.exceptions import RequestException
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def save_container_html(h1_title, content_html, folder_path, filename='index.html'):
-    full_html = f"""
-        <!DOCTYPE html>
-            <html lang="en">
-                <head>
-                    <meta charset="UTF-8">
-                    <title>{h1_title}</title>
-                </head>
-                <body>
-                    <h1>{h1_title}</h1>
-                    {content_html}
-                </body>
-            </html>
-        """
+    full_html = f"""<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{h1_title}</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <a href="../../temp/" class="temp-link" target="_blank">TEMP</a>
+        <h1>{h1_title}</h1>
+        {content_html}
+    </body>
+</html>
+"""
     
     file_path = os.path.join(folder_path, filename)
     with open(file_path, 'w', encoding='utf-8') as f:
