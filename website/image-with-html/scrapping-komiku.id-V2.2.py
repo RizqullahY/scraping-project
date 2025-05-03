@@ -64,8 +64,8 @@ def scrape_images(url_number , chapter):
         print(f"Failed to fetch page, status code: {response.status_code}")
 
 if __name__ == '__main__':
-    first_chapter = 1
-    until_chapter = 3
+    first_chapter = 25
+    until_chapter = 45
     for chapter in range(first_chapter, until_chapter + 1):
-        scrape_images(url_number = 2, chapter = chapter)
+        scrape_images(url_number = 1, chapter = chapter)
         # URL NUMBER BISA DILIHAT DI title.py
