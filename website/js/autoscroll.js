@@ -32,15 +32,20 @@ $(document).ready(function () {
 
   // Toggle with SPACE key
   $(document).keydown(function (e) {
-      if (e.code === "Space") {
-          e.preventDefault(); // prevent page from jumping
-          if (scrolling) {
-              stopScrolling();
-          } else {
-              startScrolling();
-          }
-      }
-  });
+    if (e.code === "Space") {
+        e.preventDefault(); // prevent scroll jump
+        if (scrolling) {
+            stopScrolling();
+        } else {
+            startScrolling();
+        }
+    } else if (e.code === "ArrowLeft") {
+        stopScrolling();
+    } else if (e.code === "ArrowRight") {
+        startScrolling();
+    }
+});
+
 
   // Optional: stop scroll on user interaction
   // $(document).on("mousedown mousewheel keydown", function(e) {

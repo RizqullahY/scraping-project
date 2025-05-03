@@ -38,6 +38,7 @@ def save_container_html(h1_title, content_html, folder_path, filename='index.htm
             </div>
             </div>
         <h1>{h1_title}</h1>
+        <aside class="vertical-aside">Chapter 35</aside>
         {content_html}
         <script src="../../../js/autoscroll.js"></script>
         <script src="../../../js/fullscreen.js"></script>
