@@ -1,3 +1,4 @@
 /bin/
 /lib/
-/script/for-web-v1.txt
+/script/*.txt
+/src/image-with-html-shortcut/*.txt

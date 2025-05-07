@@ -94,7 +94,7 @@ def scrape_container(chapter):
     save_container_html(h1_title, str(container_div), folder_path)
 
 if __name__ == '__main__':
-    first_chapter = 30
-    until_chapter = 50
+    first_chapter = 1
+    until_chapter = 400
     for chapter in range(first_chapter, until_chapter + 1 ):
         scrape_container(chapter)
