@@ -40,7 +40,7 @@ def scrape_images_from_url(url):
         else:
             folder_name = url.strip('/').split('/')[-1]
 
-        folder_path = os.path.join(SCRIPT_DIR, "temp", folder_name)
+        folder_path = os.path.join(SCRIPT_DIR, "temp-prod", folder_name)
         os.makedirs(folder_path, exist_ok=True)
 
         # Menyalin index.html
@@ -62,7 +62,7 @@ if __name__ == '__main__':
     txt_path = os.path.join(SCRIPT_DIR, TITLE)
 
     START_LINE = 1
-    END_LINE = 5
+    END_LINE = 100
 
     if os.path.exists(txt_path):
         with open(txt_path, 'r', encoding='utf-8') as f:

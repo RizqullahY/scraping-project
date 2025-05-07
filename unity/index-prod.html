@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAHAO</title>
+    <link rel="stylesheet" href="../../core/src/output.css" />
+    <link rel="stylesheet" href="../../core/style.css">
+    <script src="../../core/js/jquery.js"></script>
+  </head>
+  <body>
+    <div class="justify-center bg-slate-900">
+      <div
+        class="sticky top-0 bg-white shadow-md p-4 z-10 text-center items-center"
+      >
+        <div class="options flex items-center space-x-3 justify-center">
+          <!-- DROPDOWN SIZE BUTTON -->
+          <div class="relative inline-block text-left">
+            <button
+              type="button"
+              class="dropdown-toggle px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            >
+              ▼
+            </button>
+
+            <div
+              class="dropdown-menu origin-top-right absolute mt-2 w-40 rounded-md shadow-lg bg-blue-500 ring-1 ring-black ring-opacity-5 hidden z-10"
+            >
+              <div class="py-1">
+                <button
+                  class="size-button block px-4 py-2 text-sm text-white w-full text-left hover:bg-blue-100"
+                  data-width="50%"
+                >
+                  5
+                </button>
+                <button
+                  class="size-button block px-4 py-2 text-sm text-white w-full text-left hover:bg-blue-100"
+                  data-width="60%"
+                >
+                  6
+                </button>
+                <button
+                  class="size-button block px-4 py-2 text-sm text-white w-full text-left hover:bg-blue-100"
+                  data-width="70%"
+                >
+                  7
+                </button>
+                <button
+                  class="size-button block px-4 py-2 text-sm text-white w-full text-left hover:bg-blue-100"
+                  data-width="80%"
+                >
+                  8
+                </button>
+                <button
+                  class="size-button block px-4 py-2 text-sm text-white w-full text-left hover:bg-blue-100"
+                  data-width="90%"
+                >
+                  9
+                </button>
+                <button
+                  class="size-button block px-4 py-2 text-sm text-white w-full text-left hover:bg-blue-100"
+                  data-width="100%"
+                >
+                  10
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SCROLL, FULLSCREEN  -->
+          <div id="scroll-controls" class="flex items-center space-x-2">
+            <label for="scroll-speed" class="text-sm font-medium text-gray-700"
+              >Auto Scroll:</label
+            >
+            <select
+              id="scroll-speed"
+              class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"
+            >
+              <option value="1">1</option>
+              <option value="3" selected>3</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+            </select>
+            <button
+              id="start-scroll"
+              class="px-3 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 text-sm font-medium"
+            >
+              Mulai
+            </button>
+            <button
+              id="stop-scroll"
+              class="px-3 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 text-sm font-medium"
+              disabled
+            >
+              Henti
+            </button>
+            <button
+              id="fullscreen-button"
+              class="px-3 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 text-sm font-medium"
+            >
+              Fullscreen
+            </button>
+          </div>
+          <div>
+            <a href="../" class="">TEMP</a>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper"></div>
+    </div>
+    <script src="../../core/js/fullscreen.js"></script>
+    <script src="../../core/js/autoscroll.js"></script>
+    <script src="../../core/js/load-image.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".dropdown-toggle").click(function () {
+          $(".dropdown-menu").toggleClass("hidden");
+        });
+        $(".size-button").click(function () {
+          var newWidth = $(this).data("width");
+          $(".wrapper").css({
+            width: newWidth,
+            "margin-left": "auto",
+            "margin-right": "auto"
+          });
+          $(".dropdown-menu").addClass("hidden");
+        });
+        $(document).click(function (e) {
+          if (!$(e.target).closest(".dropdown-toggle, .dropdown-menu").length) {
+            $(".dropdown-menu").addClass("hidden");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
