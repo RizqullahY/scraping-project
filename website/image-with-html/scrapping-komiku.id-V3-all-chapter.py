@@ -67,10 +67,10 @@ if __name__ == '__main__':
     if os.path.exists(txt_path):
         with open(txt_path, 'r', encoding='utf-8') as f:
             urls = [line.strip() for line in f if line.strip()]
-            selected_urls = urls[START_LINE - END_LINE]
+            selected_urls = urls[START_LINE - 1:END_LINE]
             for chapter_url in selected_urls:
+                print(f'{chapter_url}\n')
                 scrape_images_from_url(chapter_url)
-                print(chapter_url)
 
     else:
         print(f"Tidak ditemukan file: {txt_path}")
