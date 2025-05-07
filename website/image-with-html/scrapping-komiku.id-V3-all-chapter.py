@@ -61,15 +61,15 @@ def scrape_images_from_url(url):
 if __name__ == '__main__':
     txt_path = os.path.join(SCRIPT_DIR, "all-chapter.txt")
 
-    START_LINE = 10
-    END_LINE = 50
+    START_LINE = 1
+    END_LINE = 5
 
     if os.path.exists(txt_path):
         with open(txt_path, 'r', encoding='utf-8') as f:
             urls = [line.strip() for line in f if line.strip()]
-            urls_reversed = urls[::-1]  # Balik dulu
-            selected_urls = urls_reversed[START_LINE - 1:END_LINE]
-            selected_urls = selected_urls[::-1]  # Balik lagi biar urutannya benar
+            urls_reversed = urls[::-1] 
+            selected_urls = urls_reversed[1:END_LINE - START_LINE]
+            selected_urls = selected_urls[::-1] 
             for chapter_url in selected_urls:
                 scrape_images_from_url(chapter_url)
 
