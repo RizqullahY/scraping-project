@@ -38,7 +38,7 @@ def scrape_judulseries(url):
 
         with open(output_file, 'w', encoding='utf-8') as f:
             for i, link in enumerate(urls, start=1):
-                f.write(f"{i}. {link}\n")
+                f.write(f"{link}\n")
 
         print(f"Hasil disimpan ke '{output_file}'")
     else:

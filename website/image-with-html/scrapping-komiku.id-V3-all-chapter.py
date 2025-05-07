@@ -1,13 +1,13 @@
 import os
 import sys
 import time
-import requests
+import requests # type: ignore
 import shutil
-from bs4 import BeautifulSoup
-from requests.exceptions import RequestException
+from bs4 import BeautifulSoup # type: ignore
+from requests.exceptions import RequestException # type: ignore
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-
+TITLE = "Komik_Omniscient_Readers_Viewpoint_-_Komiku.txt"
 def download_image(img_url, img_path, retries=5):
     for attempt in range(retries):
         try:
@@ -59,7 +59,7 @@ def scrape_images_from_url(url):
         print(f"Failed to fetch page {url}, status code: {response.status_code}")
 
 if __name__ == '__main__':
-    txt_path = os.path.join(SCRIPT_DIR, "all-chapter.txt")
+    txt_path = os.path.join(SCRIPT_DIR, TITLE)
 
     START_LINE = 1
     END_LINE = 5
@@ -67,11 +67,10 @@ if __name__ == '__main__':
     if os.path.exists(txt_path):
         with open(txt_path, 'r', encoding='utf-8') as f:
             urls = [line.strip() for line in f if line.strip()]
-            urls_reversed = urls[::-1] 
-            selected_urls = urls_reversed[1:END_LINE - START_LINE]
-            selected_urls = selected_urls[::-1] 
+            selected_urls = urls[START_LINE - END_LINE]
             for chapter_url in selected_urls:
                 scrape_images_from_url(chapter_url)
+                print(chapter_url)
 
     else:
         print(f"Tidak ditemukan file: {txt_path}")
