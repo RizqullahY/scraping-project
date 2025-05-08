@@ -1,0 +1,36 @@
+name: Build EXEs from Unity Scripts
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install PyInstaller
+      run: pip install pyinstaller
+
+    - name: Build scraping-title.exe
+      run: pyinstaller --onefile unity/scraping-title.py
+
+    - name: Build scraping-image.exe
+      run: pyinstaller --onefile unity/scraping-image.py
+
+    - name: Upload both .exe files
+      uses: actions/upload-artifact@v3
+      with:
+        name: unity-exe-files
+        path: |
+          dist/scraping-title.exe
+          dist/scraping-image.exe
