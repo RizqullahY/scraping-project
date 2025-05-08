@@ -22,10 +22,10 @@ jobs:
       run: pip install pyinstaller
 
     - name: Build scraping-title.exe
-      run: pyinstaller --onefile unity/dist unity/scraping-title.py
+      run: pyinstaller --onefile unity/scraping-title.py
 
     - name: Build scraping-image.exe
-      run: pyinstaller --onefile unity/dist unity/scraping-image.py
+      run: pyinstaller --onefile unity/scraping-image.py
 
     - name: Debug dist directory
       run: dir unity/dist
