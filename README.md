@@ -33,3 +33,8 @@ chmod +x ./git-push.sh
 ```bash
 npm install
 ```
+
+## PYTHON TO EXE
+```bash
+pyinstaller --noconsole --onefile main.py
+```

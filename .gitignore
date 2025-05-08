@@ -2,3 +2,6 @@
 
 /python/bin/
 /python/lib/
+
+/university
+*.zip
