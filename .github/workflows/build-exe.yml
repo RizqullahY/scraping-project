@@ -33,5 +33,5 @@ jobs:
       with:
         name: unity-exe-files
         path: |
-          dist/scraping-title.exe
-          dist/scraping-image.exe
+          unity/dist/scraping-title.exe
+          unity/dist/scraping-image.exe
