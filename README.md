@@ -38,3 +38,8 @@ npm install
 ```bash
 pyinstaller --noconsole --onefile main.py
 ```
+
+## GUI PYTHON TO EXE
+```bash
+auto-py-to-exe
+```

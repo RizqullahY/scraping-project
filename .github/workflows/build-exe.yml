@@ -22,13 +22,13 @@ jobs:
       run: pip install pyinstaller
 
     - name: Build scraping-title.exe
-      run: pyinstaller --onefile unity/scraping-title.py
+      run: pyinstaller --onefile --distpath unity/dist unity/scraping-title.py
 
     - name: Build scraping-image.exe
-      run: pyinstaller --onefile unity/scraping-image.py
+      run: pyinstaller --onefile --distpath unity/dist unity/scraping-image.py
 
-    - name: Debug dist directory
-      run: dir unity/dist
+    - name: Debug all .exe files
+      run: Get-ChildItem -Recurse -Filter *.exe
 
     - name: Upload both .exe files
       uses: actions/upload-artifact@v4
