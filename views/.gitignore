@@ -2,3 +2,4 @@
 /comic-image/*/*.html
 /novel/*/*.jpg
 /novel/*/*.html
+/novel/*/

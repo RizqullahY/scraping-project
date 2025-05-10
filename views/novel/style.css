@@ -100,7 +100,7 @@ h1 {
 
 .vertical-aside {
     position: fixed;
-    top: 50%;
+    top: 75%;
     left: 20px;
     transform: rotate(-90deg) translateY(-50%);
     transform-origin: left top;
