@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 from requests.exceptions import RequestException
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-SAVE_BASE_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../views/comic-image"))
+SAVE_BASE_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "../../views/comic-image"))
 
 def download_image(img_url, img_path, retries=5):
     for attempt in range(retries):
