@@ -1,0 +1,4 @@
+from .comic_scraping_title import scraping_title_komiku
+from .comic_scraping_image import scraping_image_komiku
+from .novel_scraping_title import scraping_title_bacalightnovel
+from .novel_scraping_content import scraping_content_bacalightnovel

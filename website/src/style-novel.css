@@ -1,0 +1,122 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'JetBrains Mono', monospace;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+.text-left {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+.scroll-controls-container {
+    position: sticky;
+    top: 0;
+    background-color: #1e1e1e;
+    padding: 16px;
+    z-index: 10;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.scroll-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.scroll-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #ccc;
+}
+
+.scroll-select {
+    padding: 6px;
+    font-size: 0.875rem;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+}
+
+.scroll-button {
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+}
+
+.scroll-button.start {
+    background-color: #4f46e5;
+}
+
+.scroll-button.start:hover {
+    background-color: #4338ca;
+}
+
+.scroll-button.stop {
+    background-color: #dc2626;
+}
+
+.scroll-button.stop:hover {
+    background-color: #b91c1c;
+}
+
+.scroll-button.fullscreen {
+    background-color: #22c55e;
+}
+
+.scroll-button.fullscreen:hover {
+    background-color: #16a34a;
+}
+
+.scroll-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.temp-button {
+    background-color: #e79d3b;
+}
+
+.temp-button:hover {
+    background-color: #c7922f;
+}
+
+.vertical-aside {
+    position: fixed;
+    top: 75%;
+    left: 20px;
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: left top;
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #1e1e1e;
+    color: #ccc;
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    writing-mode: horizontal-tb;
+    z-index: 999;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.vertical-aside:hover {
+    opacity: 1;
+}
+

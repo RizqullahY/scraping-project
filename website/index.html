@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HEHEBOY</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <script src="./lib/jquery.js"></script>
+  </head>
+  <body>
+    <div class="justify-center bg-slate-900">
+      <div class="sticky top-0 bg-white shadow-md p-4 z-10 text-center items-center">
+        <div class="options flex items-center space-x-3 justify-center">
+          <button
+            class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            data-width="50%"
+          >
+            5
+          <button
+            class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            data-width="60%"
+          >
+            6
+          </button>
+          <button
+            class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            data-width="70%"
+          >
+            7
+          </button>
+          <button
+            class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            data-width="80%"
+          >
+            8
+          </button>
+          <button
+            class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            data-width="90%"
+          >
+            9
+          </button>
+          <button
+            class="size-button px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            data-width="100%"
+          >
+            10
+          </button>
+          <div id="scroll-controls" class="flex items-center space-x-2">
+            <label for="scroll-speed" class="text-sm font-medium text-gray-700"
+              >Auto Scroll:</label
+            >
+            <select
+              id="scroll-speed"
+              class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"
+            >
+              <option value="1">1</option>
+              <option value="3" selected>3</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+            </select>
+            <button
+              id="start-scroll"
+              class="px-3 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-400 text-sm font-medium"
+            >
+              Mulai
+            </button>
+            <button
+              id="stop-scroll"
+              class="px-3 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 text-sm font-medium"
+              disabled
+            >
+              Henti
+            </button>
+            <button id="fullscreen-button" class="px-3 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 text-sm font-medium">
+                Fullscreen
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <img
+          src="./image/image_1.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_2.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_3.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_4.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_5.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_6.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_7.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_8.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_9.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_10.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_11.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_12.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_13.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_14.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_15.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_16.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_17.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_18.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_19.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_20.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_21.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_22.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_23.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_24.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_25.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_26.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_27.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_28.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_29.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+          src="./image/image_30.jpg"
+          alt="Sudah Habis Atau Sudah Tau Kalau Error"
+        />
+        <img
+  src="./image/image_31.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_32.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_33.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_34.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_35.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_36.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_37.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_38.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_39.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_40.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_41.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_42.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_43.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_44.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_45.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_46.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_47.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_48.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_49.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_50.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_51.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_52.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_53.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_54.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_55.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_56.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_57.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_58.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_59.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_60.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_61.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_62.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_63.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_64.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_65.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_66.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_67.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_68.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_69.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_70.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_71.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_72.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_73.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_74.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_75.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_76.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_77.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_78.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_79.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_80.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_81.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_82.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_83.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_84.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_85.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_86.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_87.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_88.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_89.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_90.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_91.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_92.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_93.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_94.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_95.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_96.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_97.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_98.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_99.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_100.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_101.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_102.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_103.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_104.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_105.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_106.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_107.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_108.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_109.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_110.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_111.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_112.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_113.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_114.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_115.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_116.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_117.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_118.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_119.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_120.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_121.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_122.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_123.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_124.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_125.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_126.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_127.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_128.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_129.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_130.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_131.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_132.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_133.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_134.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_135.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_136.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_137.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_138.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_139.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_140.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_141.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_142.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_143.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_144.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_145.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_146.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_147.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_148.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_149.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_150.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_151.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_152.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_153.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_154.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_155.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_156.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_157.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_158.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_159.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_160.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_161.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_162.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_163.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_164.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_165.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_166.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_167.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_168.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_169.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_170.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_171.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_172.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_173.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_174.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_175.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_176.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_177.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_178.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_179.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_180.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_181.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_182.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_183.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_184.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_185.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_186.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_187.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_188.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_189.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_190.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_191.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_192.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_193.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_194.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_195.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_196.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_197.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_198.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_199.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+<img
+  src="./image/image_200.jpg"
+  alt="Sudah Habis Atau Sudah Tau Kalau Error"
+/>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $(".size-button").click(function () {
+          var newWidth = $(this).data("width");
+          $(".wrapper").css("width", newWidth);
+          $(".wrapper").css("margin-left", "auto");
+          $(".wrapper").css("margin-right", "auto");
+        });
+      });
+    </script>
+    <script src="./js/fullscreen.js"></script>
+    <script src="./js/autoscroll.js"></script>
+  </body>
+</html>
